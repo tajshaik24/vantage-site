@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vantage Support</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header><img src="icon.png" alt=""><div><h1>Vantage</h1><div class="muted">Remote desktop for iPad and iPhone, made for Macs</div></div></header>
+
+<p>Questions, problems, or ideas? Email <a href="mailto:tajshaik24@gmail.com">tajshaik24@gmail.com</a>. Please include your iPad or iPhone model,
+its iOS version, your macOS version, and what you see.</p>
+
+<section class="card">
+<h2>Getting connected</h2>
+<ol>
+<li>On your Mac, open <b>System Settings → General → Sharing</b> and turn on <b>Screen Sharing</b>.</li>
+<li>Open Vantage on your iPad or iPhone. Your Mac appears under <b>Nearby</b> when both are on the same network. Tap it, or tap
+<b>+</b> and enter the Mac's name or address.</li>
+<li>Sign in with your Mac username and password.</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>Reaching your Mac from anywhere</h2>
+<ol>
+<li>Install Tailscale on your Mac and sign in.</li>
+<li>In Vantage, open <b>Settings</b>, turn on <b>Tailscale</b>, and sign in with the same account.</li>
+<li>Your Mac appears under <b>On Your Tailnet</b>. Add it, and Vantage connects through Tailscale from any network.</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>Troubleshooting</h2>
+<ul>
+<li><b>My Mac doesn't appear under Nearby.</b> Check that Screen Sharing is on and that the iPad or iPhone and the Mac are on the
+same network. Guest networks often block discovery. Also check <b>Settings → Privacy &amp; Security → Local Network</b>
+on the iPad or iPhone and make sure Vantage is allowed.</li>
+<li><b>Sign-in fails.</b> Use the username and password of an account on the Mac. If Screen Sharing is set to
+allow only some users, make sure your account is included.</li>
+<li><b>A Tailscale Mac shows as offline.</b> Make sure Tailscale is running and signed in on the Mac.</li>
+</ul>
+</section>
+
+<nav><a href="./">Vantage</a> · <a href="privacy.html">Privacy Policy</a></nav>
+</main>
+</body>
+</html>
