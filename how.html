@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Vantage Works</title>
+<meta name="description" content="How Vantage connects to your Mac: macOS Screen Sharing, built-in Tailscale, High Performance video, Remote controls, Laptop Mode and the optional Vantage Helper.">
+<link rel="icon" href="img/icon-256.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.flow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 18px 0 8px; font-size: 15px; }
+.flow span { background: var(--bg); border-radius: 10px; padding: 6px 12px; }
+.flow i { color: var(--muted); font-style: normal; }
+.tag { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+       color: var(--accent); margin-left: 6px; vertical-align: 2px; }
+</style>
+</head>
+<body>
+<main>
+<header><img src="icon.png" alt=""><div><h1>How Vantage works</h1><div class="muted">The short version, for the curious</div></div></header>
+
+<section class="card">
+<h2>It talks to the Screen Sharing already on your Mac</h2>
+<p>Every Mac has Screen Sharing built in. Vantage speaks the same protocol Apple's own Screen Sharing app uses, so there's
+nothing to install on the Mac: turn Screen Sharing on, sign in with your Mac account, and you're in.</p>
+<div class="flow"><span>iPad or iPhone</span><i>→</i><span>your network or Tailscale</span><i>→</i><span>macOS Screen Sharing</span></div>
+<ul>
+<li><b>Sign-in</b> uses the Mac's own secure login, and the session is encrypted the way Screen Sharing encrypts it.</li>
+<li><b>The picture</b> arrives in Apple's Screen Sharing format, pushed by the Mac as it changes. The pointer is drawn on your
+device, so it moves the moment your finger does.</li>
+<li><b>Linux and Windows</b> computers running a VNC server work too, with secure sign-in.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Anywhere, with Tailscale built in</h2>
+<p>Vantage runs its own Tailscale connection inside the app. Sign in once in Settings and your Macs on your tailnet show up,
+reachable from any network, without a separate VPN app on your iPad or iPhone. Each saved computer is either Local or
+Tailscale, so you always know which way you're connected.</p>
+</section>
+
+<section class="card">
+<h2>Standard and High Performance</h2>
+<ul>
+<li><b>Standard</b> works everywhere and keeps your typing and clicks first: the picture can sharpen a moment later, but input
+never waits behind it.</li>
+<li><b>High Performance</b> (M-series iPad, Apple silicon Mac) asks the Mac for the same stream Apple's High Performance mode
+uses: HEVC video at 60 frames a second with the Mac's sound, encrypted end to end. It needs a fast network; if the
+connection can't keep up, Vantage switches to Standard by itself and tells you.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Remote: controls without the screen</h2>
+<p>Keyboard &amp; Mouse, Presentation and Controller connect to your Mac the same way, but ask for only one picture (to learn
+the screen size and where the pointer is) and then stop the video. What's left is your input, which is tiny, so
+a remote starts fast and barely touches your battery or data.</p>
+<ul>
+<li><b>Keyboard &amp; Mouse</b>: a trackpad, a Mac keyboard and dictation.</li>
+<li><b>Presentation</b>: slide controls for Keynote, PowerPoint and Google Slides, and a laser pointer you aim by tilting your
+phone. In PowerPoint it switches on PowerPoint's own laser.</li>
+<li><b>Controller</b>: on-screen or Bluetooth, with each button sending the key you choose.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Laptop Mode on iPhone Duo</h2>
+<p>Half-open your iPhone Duo with the hinge across, like a laptop, and choose <b>Laptop Mode</b>. Your Mac goes above the hinge,
+shaped to fit it, and a Mac keyboard and trackpad go below. Close the phone and the session waits for you.</p>
+</section>
+
+<section class="card">
+<h2>The Vantage Helper <span class="tag">Coming soon</span></h2>
+<p>Everything above works with Screen Sharing alone. The Vantage Helper is a small, optional menu-bar app for your Mac that
+adds what Screen Sharing can't carry, starting with <b>native multi-finger touch</b>: your fingers reach the Mac as a real
+touchscreen, the way the new touch MacBook Pro works. It's waiting on macOS 27.3.</p>
+<ul>
+<li><b>Pairing</b>: your device and your Mac each show a six-digit code, and you approve on both. The Mac only listens for
+pairing for two minutes after you ask it to.</li>
+<li><b>Every connection</b> after that proves who's on each end and is encrypted, so nobody else on the network can send
+your Mac input or read what's sent.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Private by design</h2>
+<p>Vantage connects straight to your own computers. Passwords stay in your device's keychain. There are no accounts, ads,
+analytics or tracking. See the <a href="privacy.html">privacy policy</a>.</p>
+</section>
+
+<nav><a href="./">Vantage</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></nav>
+</main>
+</body>
+</html>
