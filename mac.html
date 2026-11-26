@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vantage on the Mac</title>
+<meta name="description" content="Vantage for Mac reaches your other computers from your Mac, and the optional Vantage Helper gives your iPhone and iPad fuller control of a Mac.">
+<meta property="og:title" content="Vantage on the Mac">
+<meta property="og:image" content="img/mac-library.jpg">
+<link rel="icon" href="img/icon-256.png">
+<link rel="apple-touch-icon" href="img/icon-256.png">
+<link rel="stylesheet" href="home.css">
+<style>
+.hero.short { padding-bottom: 0; }
+.hero.short h1 { max-width: 15ch; }
+.macwin {
+  margin: 56px auto 0; max-width: 980px; border-radius: 14px; overflow: hidden; text-align: left;
+  background: #1e1e22; box-shadow: var(--shadow), 0 0 0 1px rgba(255, 255, 255, .12);
+}
+.macwin .bar { height: 30px; display: flex; align-items: center; gap: 8px; padding: 0 12px; background: #2a2a2f; }
+.macwin .bar i { width: 12px; height: 12px; border-radius: 50%; background: #ff5f57; }
+.macwin .bar i:nth-child(2) { background: #febc2e; }
+.macwin .bar i:nth-child(3) { background: #28c840; }
+.macwin .bar span { margin-left: 10px; font-size: 13px; color: rgba(255, 255, 255, .6); }
+.macwin img { width: 100%; }
+.soon { display: inline-block; font-size: 12px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 999px; background: var(--chip); color: var(--accent); margin-left: 8px; vertical-align: 6px; }
+.helper-shots { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; align-items: start; }
+.helper-shots img { border-radius: 14px; box-shadow: var(--shadow); }
+.dark-only { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .light-only { display: none; }
+  :root:not([data-theme="light"]) .dark-only { display: block; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon-256.png" alt="">Vantage</a>
+    <nav>
+      <a href="./">Home</a>
+      <a class="hide-s" href="new.html">What's new</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero short">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Vantage for Mac is in testing</span>
+    <h1>Vantage, on your Mac too.</h1>
+    <p class="lede">The same library, the same fast sessions, now in a Mac window.</p>
+    <div class="macwin">
+      <div class="bar"><i></i><i></i><i></i><span>Vantage</span></div>
+      <img src="img/mac-library.jpg" width="1600" height="1075"
+           alt="Vantage on a Mac: a sidebar of connections and remotes, and computers as cards with Local or Tailscale badges">
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <div class="kicker">Vantage for Mac <span class="soon">Soon</span></div>
+      <h2>Feels like a Mac app.</h2>
+      <p class="sub">Your computers are a click away, with Tailscale built in. Your Mac's keyboard, mouse and trackpad drive the other computer.</p>
+      <ul class="points">
+        <li><span><b>Shortcuts go through</b>: ⌘C, ⌘V and the rest reach the other computer. ⌘W disconnects and ⌘Q quits.</span></li>
+        <li><span><b>Menus you expect</b>: New Computer, Connect To, Zoom to Fit and Actual Size.</span></li>
+        <li><span><b>Pixel for pixel</b>: the remote desktop isn't scaled or blurred.</span></li>
+      </ul>
+    </div>
+    <img class="shot" src="img/mac-session.jpg" width="1600" height="1075" loading="lazy"
+         alt="A remote desktop in a Vantage window on a Mac, with the floating toolbar below it">
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split flip">
+    <div>
+      <div class="kicker">Vantage Helper <span class="soon">Soon</span></div>
+      <h2>More control from your iPhone and iPad.</h2>
+      <p class="sub">An optional menu-bar app for the Mac you're controlling. Vantage works without it. With it, the remotes get the parts Screen Sharing can't carry.</p>
+      <ul class="points">
+        <li><span><b>Real keys and scrolling</b>, plus volume, play/pause and brightness keys.</span></li>
+        <li><span><b>A laser that floats over any app</b>, as a red dot or a spotlight.</span></li>
+        <li><span><b>Paired with a code</b> shown on both screens, and every connection is encrypted.</span></li>
+      </ul>
+    </div>
+    <div class="helper-shots">
+      <img class="light-only" src="img/helper-panel-light.png" width="680" height="982" loading="lazy" alt="The Vantage Helper menu: connected to an iPad, ready for keyboard and mouse, laser and controller">
+      <img class="dark-only" src="img/helper-panel-dark.png" width="680" height="982" loading="lazy" alt="">
+      <img class="light-only" src="img/helper-pair-light.png" width="880" height="736" loading="lazy" alt="Pairing: the Mac shows a six-digit code to compare with the iPad">
+      <img class="dark-only" src="img/helper-pair-dark.png" width="880" height="736" loading="lazy" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="beta" style="padding-top:24px">
+  <div class="wrap">
+    <div class="closer">
+      <img src="img/icon-256.png" alt="">
+      <h2>Want to try it?</h2>
+      <p>Vantage is in a small private beta on TestFlight. Send a note and you'll get an invite.</p>
+      <div class="ctas">
+        <a class="btn primary" href="mailto:tajshaik24@gmail.com?subject=Vantage%20beta">Ask for an invite</a>
+        <a class="btn ghost" href="how.html">How it works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Taj Shaik</span>
+    <nav><a href="how.html">How it works</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+  </div>
+</footer>
+
+</body>
+</html>

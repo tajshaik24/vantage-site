@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's New in Vantage</title>
+<meta name="description" content="New in Vantage: a Quick Connect widget and Siri, your Mac on the TV with AirPlay, a rebuilt Laptop Mode keyboard, and a library in your own order.">
+<meta property="og:title" content="What's New in Vantage">
+<meta property="og:image" content="img/tabletop.jpg">
+<link rel="icon" href="img/icon-256.png">
+<link rel="apple-touch-icon" href="img/icon-256.png">
+<link rel="stylesheet" href="home.css">
+<style>
+.hero.short { padding-bottom: 72px; }
+.hero.short h1 { max-width: 16ch; }
+.widgets { display: grid; gap: 16px; justify-items: center; }
+.widgets img { width: 100%; max-width: 460px; border-radius: 28px; box-shadow: var(--shadow); }
+.widgets img.small { max-width: 220px; }
+.dark-only { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .light-only { display: none; }
+  :root:not([data-theme="light"]) .dark-only { display: block; }
+}
+.siri {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 10px 16px; border-radius: 14px;
+  background: var(--chip); color: var(--fg); font-size: 16px;
+}
+.siri::before {
+  content: ""; width: 18px; height: 18px; border-radius: 50%; flex: none;
+  background: conic-gradient(from 200deg, #3a8dff, #c04fd8, #f2876b, #3a8dff);
+}
+/* A TV with the Mac on it, and the phone below it as the controller. */
+.stage { position: relative; max-width: 620px; margin: 0 auto; padding-bottom: 40px; }
+.tv { background: #0e0d13; border-radius: 16px; padding: 10px; box-shadow: var(--shadow); }
+.tv img { border-radius: 8px; aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+.tv-stand { width: 28%; height: 10px; margin: 0 auto; background: #2a2833; border-radius: 0 0 10px 10px; }
+.stage .phone { position: absolute; right: 2%; bottom: 0; width: 28%; max-width: 170px; padding: 6px; border-radius: 26px; }
+.stage .phone img { border-radius: 21px; aspect-ratio: 640 / 1059; }
+.airplay { position: absolute; left: 50%; top: -26px; transform: translateX(-50%); width: 40px; height: 40px;
+  border-radius: 50%; display: grid; place-items: center; color: #fff; background: linear-gradient(140deg, var(--accent), var(--accent-2)); }
+.airplay svg { width: 22px; height: 22px; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon-256.png" alt="">Vantage</a>
+    <nav>
+      <a href="./">Home</a>
+      <a class="hide-s" href="mac.html">Mac</a>
+      <a class="hide-s" href="how.html">How it works</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero short">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>New in the TestFlight beta</span>
+    <h1>Faster in, and more ways to use it.</h1>
+    <p class="lede">One tap from your Home Screen, your Mac on the TV, and a real keyboard on iPhone Duo.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <div class="kicker">Quick Connect</div>
+      <h2>Your Macs, on your Home Screen.</h2>
+      <p class="sub">Add the Vantage widget and your computers are one tap away. Each shows its route and when you last used it.</p>
+      <ul class="points">
+        <li><span><b>Siri and Shortcuts</b>: just say which computer. Already in a session? Vantage switches to it.</span></li>
+        <li><span><b>Spotlight</b> finds your computers by name.</span></li>
+        <li><span>The widget only knows names and addresses, never your passwords.</span></li>
+      </ul>
+      <span class="siri">“Connect to Studio with Vantage”</span>
+    </div>
+    <div class="widgets">
+      <img class="light-only" src="img/widget-medium-light.png" width="700" height="327" loading="lazy"
+           alt="The Vantage widget listing four computers, each with Local or Tailscale and when it was last used">
+      <img class="dark-only" src="img/widget-medium-dark.png" width="700" height="327" loading="lazy" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split flip">
+    <div>
+      <div class="kicker">AirPlay</div>
+      <h2>Your Mac, on the big screen.</h2>
+      <p class="sub">AirPlay to a TV, or plug in a display, and the Mac's desktop fills it. Your iPhone or iPad becomes its keyboard and trackpad.</p>
+      <ul class="points">
+        <li><span><b>Smooth on the TV</b>: High Performance video shows there too.</span></li>
+        <li><span><b>Rather touch?</b> Keep the desktop on your device from the ≡ menu.</span></li>
+        <li><span><b>Unplug any time</b>: the session carries on where it was.</span></li>
+      </ul>
+    </div>
+    <div class="stage">
+      <div class="airplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-1"/><path d="M12 15l5 6H7z"/></svg></div>
+      <div class="tv"><img src="img/session.jpg" width="1600" height="1100" loading="lazy" alt="A Mac desktop on a TV"></div>
+      <div class="tv-stand"></div>
+      <div class="phone"><img src="img/airplay-controller.jpg" width="640" height="1059" loading="lazy"
+           alt="An iPhone showing a Mac keyboard and a trackpad that reads Showing on the external display"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <div class="kicker">iPhone Duo</div>
+      <h2>Laptop Mode, rebuilt.</h2>
+      <p class="sub">Half-fold your iPhone Duo and get four rows of big keys and a wide trackpad, no toolbar in the way.</p>
+      <ul class="points">
+        <li><span><b>Pull a key down</b> for its number or symbol.</span></li>
+        <li><span><b>fn</b> turns the top row into F1–F12.</span></li>
+        <li><span><b>The ≡ key</b> holds every toolbar button and Disconnect.</span></li>
+      </ul>
+    </div>
+    <div class="phone"><img src="img/tabletop.jpg" width="640" height="1391" loading="lazy"
+         alt="Laptop Mode: the Mac above the fold, a four-row keyboard and a trackpad below"></div>
+  </div>
+</section>
+
+<section class="band" style="padding-top:48px">
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker">And more</div>
+      <h2>Small things, done right.</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1.5"/><rect x="14" y="4" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg></div>
+        <h3>Your order</h3>
+        <p>Drag computers in the library wherever you like. Recently Used is one tap away.</p>
+      </div>
+      <div class="card">
+        <div class="icon warm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div>
+        <h3>Drag delay</h3>
+        <p>Rest your finger a moment before a drag starts, so a stray swipe never moves a window.</p>
+      </div>
+      <div class="card">
+        <div class="icon cool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="6"/><path d="M12 3v7M6 10h12"/></svg></div>
+        <h3>Every mouse button</h3>
+        <p>With a mouse or trackpad, right- and middle-button drags work just like on the Mac.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beta" style="padding-top:24px">
+  <div class="wrap">
+    <div class="closer">
+      <img src="img/icon-256.png" alt="">
+      <h2>Try it.</h2>
+      <p>Vantage is in a small private beta on TestFlight. Send a note and you'll get an invite.</p>
+      <div class="ctas">
+        <a class="btn primary" href="mailto:tajshaik24@gmail.com?subject=Vantage%20beta">Ask for an invite</a>
+        <a class="btn ghost" href="./">Back to Vantage</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Taj Shaik</span>
+    <nav><a href="how.html">How it works</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+  </div>
+</footer>
+
+</body>
+</html>
